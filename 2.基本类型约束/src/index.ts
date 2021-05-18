@@ -1,5 +1,3 @@
-import { type } from "os";
-
 let a:string;
 
 a = 'eee';

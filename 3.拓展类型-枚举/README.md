@@ -1,39 +1,39 @@
-## 下载ts
+# 扩展类型-枚举
 
-```js
- npm install -g typescript
+> 扩展类型：类型别名、枚举、接口、类
+
+枚举通常用于约束某个变量的取值范围。
+
+字面量和联合类型配合使用，也可以达到同样的目标。
+
+# 字面量类型的问题
+
+- 在类型约束位置，会产生重复代码。可以使用类型别名解决该问题。
+- 逻辑含义和真实的值产生了混淆，会导致当修改真实值的时候，产生大量的修改。
+- 字面量类型不会进入到编译结果。
+
+# 枚举
+
+如何定义一个枚举：
+
+```
+enum 枚举名{
+    枚举字段1 = 值1,
+    枚举字段2 = 值2,
+    ...
+}
 ```
 
-## Ts的配置文件
-tsconfig.json
+枚举会出现在编译结果中，编译结果中表现为对象。
 
-tsc --init 初始化配置文件
+枚举的规则：
 
-使用配置文件后，不需要跟上文件名
+- 枚举的字段值可以是字符串或数字
+- 数字枚举的值会自动自增
+- 被数字枚举约束的变量，可以直接赋值为数字
+- 数字枚举的编译结果 和 字符串枚举有差异
 
-安装@types/node用于解决node环境不智能提示console的问题
-@types是一个ts的类型库，其中包含了很多对js代码的类型描述
+最佳实践：
 
-npm i -D @types/node
-
-默认编译整个目录中所有的ts文件
-
-
-## 简化编译的过程
-1. ts-node:将ts代码在内存中完成编译，同时完成运行
-npm i -g ts-node
-ts-node src/index.ts 执行编译
-
-2. nodemon:用于检测文件的变化
-npm install -g nodemon
-
-nodemon --exec(执行) ts-node src/index.ts
-
-
-nodemon --exec ts-node src/index.ts
-
-nodemon -e ts --exec ts-node src/index.ts
-表示监控的文件拓展名是ts
-
-nodemon --watch src -e ts --exec ts-node src/index.ts
-表示只监控src的文件夹
+- 尽量不要在一个枚举中既出现字符串字段，又出现数字字段
+- 使用枚举时，尽量使用枚举字段的名称，而不使用真实的值
