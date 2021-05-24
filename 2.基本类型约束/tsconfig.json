@@ -3,7 +3,8 @@
     "target": "ES2016",//配置ts编译成js的版本标准,es7 == es2016
     "module": "commonJS",//配置编译目标使用的模块化标准 
     "lib": ["ES2016","DOM"],//默认使用的环境
-    "outDir": "./dist"//输出文件的目录地址
+    "outDir": "./dist",//输出文件的目录地址
+    "strictNullChecks": true//严格匹配，避免undefined和null的
   },
   "include": ["./src"],//表示要编译的文件夹路径
   // "files": ["./src/index.ts"]//表示要编译某一个文件夹中的文件
