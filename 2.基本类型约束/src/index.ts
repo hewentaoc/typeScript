@@ -34,7 +34,7 @@ printValue({
     age:30
 })
 
-let n:string = undefined;
+// let n:string = undefined;
 // n.toUpperCase();
 
 function printMenu(){
@@ -107,3 +107,20 @@ function sum(a:number,b:number,c?:number){
     }
 }
 sum(1,2);
+function combine(a:number,b:number):number;
+function combine(a:string,b:string):string;
+//函数重载
+function combine(a:number | string , b: number | string):number|string{
+    if(typeof a == 'string' && typeof b =='string'){
+        return a + b;
+    }else if(typeof a  == 'number' && typeof b == 'number'){
+        return a + b;
+    }
+    throw new Error('必须是相同的类型')
+}
+let res1 = combine(1,1);
+// let res2 = combine('1',2);
+let res3 = combine('1','3');
+
+
+// document.write('a')

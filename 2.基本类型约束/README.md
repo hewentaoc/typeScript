@@ -105,11 +105,16 @@ type User = {
 # 函数的相关约束
 
 函数重载：在函数实现之前，对函数调用的多种情况进行声明
+```js
+ function combine(a:number,b:number):number;
+ function combine(a:string,b:string):string;
+```
 
 可选参数：可以在某些参数名后加上问号，表示该参数可以不用传递。可选参数必须在参数列表的末尾。
 
 ```ts
-  function sum(a:number,b:number,c?:number){
+  //添加默认值
+  function sum(a:number,b:number,c?:number,d?:number = 0){
       if(c){
         return a + b + c;
       }else{
