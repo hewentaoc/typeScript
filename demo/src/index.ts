@@ -1,1 +1,2 @@
-import './poker1.ts'
+// import './poker1.ts'
+import './pock2.ts'
