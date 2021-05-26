@@ -37,3 +37,7 @@ nodemon -e ts --exec ts-node src/index.ts
 
 nodemon --watch src -e ts --exec ts-node src/index.ts
 表示只监控src的文件夹
+
+3. tsc动态监听文件变化生成文件
+
+tsc --watch
