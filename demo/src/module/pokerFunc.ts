@@ -1,33 +1,7 @@
-
-
-enum Markers {
-    A = 'A',
-    Two = '2',
-    Three = '3',
-    Four = '4',
-    Five = '5',
-    Six = '6',
-    Seven = '7',
-    Eight = '8',
-    Nine = '9',
-    Ten = '10',
-    Eleven = 'J',
-    Twelve = 'Q',
-    Thirty = 'K'
-}
-enum Colors {
-    heart = '♥️' ,
-    spade = '♠️',
-    club = '♣️',
-    dianmond = '♦️'
-}
-type Pocker = {
-    color:Colors,
-    number:Markers
-}
+import { Pocker, Markers, Colors } from "./pokerMap";
 
 let arr:Pocker[] = [];
-function createPocker():Pocker[]{
+export function createPocker():Pocker[]{
     let marks = Object.values(Markers);
     let colors = Object.values(Colors);
     for (const m of marks) {
@@ -40,8 +14,7 @@ function createPocker():Pocker[]{
     }
     return arr;
 }
-createPocker();
-function printPocker(pockers:Pocker[]){
+export function printPocker(pockers:Pocker[]){
     let result = '';
     pockers.forEach((item,index)=>{
         let str = item.color + ' ' + item.number;
@@ -52,7 +25,6 @@ function printPocker(pockers:Pocker[]){
     })
     console.log(result)
 }
-printPocker(arr);
 
 
 
