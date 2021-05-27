@@ -5,7 +5,9 @@
     "lib": ["ES2016","DOM"],//默认使用的环境
     "outDir": "./dist",//输出文件的目录地址
     "strictNullChecks": true,//严格匹配，避免undefined和null的
-    "removeComments": true //移除编译结果中的注释
+    "removeComments": true, //移除编译结果中的注释
+    "noImplicitUseStrict":true,//编译结果中不包含"use strict"
+    // "moduleResolution":"Node"//设置解析模块的模式
   },
   "include": ["./src"],//表示要编译的文件夹路径
   // "files": ["./src/index.ts"]//表示要编译某一个文件夹中的文件

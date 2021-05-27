@@ -3,4 +3,4 @@ export = {
     run:function(p:string){
         return p + 'run';
     }
-}
+} 
