@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "commit": "nodemon --watch src -e ts --exec ts-node src/index.ts"
+        "commit": "sh commit.sh"
     },    
     "devDependencies": {
         "@types/node": "^11.13.7"
