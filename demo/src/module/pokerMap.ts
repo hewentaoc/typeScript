@@ -19,7 +19,22 @@ export enum Colors {
     club = '♣️',
     dianmond = '♦️'
 }
-export type Pocker = {
-    color:Colors,
+
+
+export interface Card {
+    show:()=> void;
+}
+
+export interface NormalCard extends Card {
+    color:Colors
     number:Markers
 }
+
+export interface Jorker extends Card{
+    status:'Big Jorker' | 'Small Jorker'
+}
+// export type Pocker 
+// export type Pocker = {
+//     color:Colors,
+//     number:Markers
+// }
