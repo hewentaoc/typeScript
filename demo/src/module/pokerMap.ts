@@ -31,7 +31,7 @@ export interface NormalCard extends Card {
 }
 
 export interface Jorker extends Card{
-    status:'Big Jorker' | 'Small Jorker'
+    status:'Big Jorker' | 'Small Jorker' | 'BJ' | 'SJ'
 }
 // export type Pocker 
 // export type Pocker = {

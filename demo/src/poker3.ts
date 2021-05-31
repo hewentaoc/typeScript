@@ -1,4 +1,4 @@
-import { createPocker, printPocker } from "./module/pokerFunc";
+// import { createPocker, printPocker } from "./module/pokerFunc";
 
-let arr = createPocker();
-printPocker(arr)
+// let arr = createPocker();
+// printPocker(arr)
