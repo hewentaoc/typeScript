@@ -9,10 +9,6 @@ export function createPocker():Pocker{
     let colors = Object.values(Colors);
     for (const m of marks) {
         for (const c of colors) {
-            // let card:NormalCard = {
-            //     color:c,
-            //     number:m
-            // }
             let card:NormalCard = {
                 color:c,
                 number:m,
